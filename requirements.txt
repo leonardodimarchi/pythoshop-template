@@ -1,0 +1,3 @@
+pywin32==303
+pathvalidate==2.5.0
+photoshop-python-api==0.17.0
