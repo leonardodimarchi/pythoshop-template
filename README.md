@@ -7,4 +7,5 @@ A program to change a text layer at a photoshop template
 - [ ] Create a CLI or GUI to handle the input
 
 ## 🔍 You should also see
-[Using variables with templates - helpx.adobe.com](https://helpx.adobe.com/photoshop/using/creating-data-driven-graphics.html)
+<a href="https://helpx.adobe.com/photoshop/using/creating-data-driven-graphics.html" target="_blank">Using variables with templates - helpx.adobe.com</a>
+
