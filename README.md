@@ -1,5 +1,5 @@
 # Pythoshop
-A python program to apply text and images at a photoshop template
+A program to apply text and images at a photoshop template
 
 ## ✔️ Checklist
 - [x] Apply a text layer change
