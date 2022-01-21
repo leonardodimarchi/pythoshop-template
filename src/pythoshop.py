@@ -1,4 +1,5 @@
 import os
+import sys
 import photoshop.api as ps
 from pathvalidate import sanitize_filename
 
@@ -9,7 +10,6 @@ class Pythoshop:
     def __init__(self):
         self.photoshop_app = ps.Application()
         self.photoshop_app.displayDialogs = ps.DialogModes.DisplayNoDialogs
-        self.photoshop_app.Visible = False
 
     def closePhotoshop(self):
         while self.photoshop_app.documents.length > 0:
@@ -57,3 +57,18 @@ class Pythoshop:
         self.psd_file.saveAs(full_path, options)
 
         return os.path.isfile(full_path)
+
+if __name__ == '__main__':
+    psd_path = os.path.abspath(sys.argv[1])
+    layer_name = sys.argv[2]
+    new_text = sys.argv[3]
+    filename = sys.argv[4]
+    folder_path = os.path.abspath(sys.argv[5])
+
+    pythoshop = Pythoshop()
+
+    pythoshop.openPSDFile(psd_path)
+    pythoshop.updateTitleLayer(layer_name, new_text)
+    pythoshop.exportJPEG(filename, folder_path)
+    pythoshop.closePSDFile()
+    pythoshop.closePhotoshop()
